@@ -29,6 +29,11 @@ const connectDB = require('./config/connectDB');
 connectDB();
 
 // Set routes
+
+app.get('/', (req, res) => {
+    res.send('Hello Api');
+});
+
 const routes = require('./routes/routes');
 app.use('/api', routes);
 
